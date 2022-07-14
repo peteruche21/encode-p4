@@ -8,9 +8,11 @@ async function main() {
     "EncodeNFT",
     signer[0]
   );
-  const tx = await nftContract.safeMint(signer[0].address);
-  tx.wait();
-  console.log("minted");
+  for (let i = 0; i < 10; i++) {
+    const tx = await nftContract.safeMint(signer[0].address);
+    await tx.wait();
+    console.log(`minted nft #${i}`);
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

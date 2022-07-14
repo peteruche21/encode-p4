@@ -8,11 +8,11 @@
     "frontend"
   ],
   "scripts": {
-    "dev": "yarn workspace next-app next dev",
-    "build": "yarn workspace next-app next build",
-    "start": "yarn workspace next-app next start",
-    "lint": "yarn workspace next-app next lint",
-    "hardhat": "yarn workspace smart-contracts hardhat",
+    "dev": "yarn workspace frontend next dev",
+    "build": "yarn workspace frontend next build",
+    "start": "yarn workspace frontend next start",
+    "lint": "yarn workspace frontend next lint",
+    "hardhat": "yarn workspace contract hardhat",
     "nest:start": "yarn workspace backend nest start --watch",
     "nest:build": "yarn workspace backend nest build",
     "nest:test": "yarn workspace backend jest"

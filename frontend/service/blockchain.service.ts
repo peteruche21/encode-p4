@@ -9,7 +9,8 @@ class BlockchainService {
 
   constructor() {
     this.tokenContractAddress =
-      process.env.REACT_APP_TOKEN_CONTRACT_ADDRESS || "";
+      process.env.NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS ||
+      TokenContractInterface.address;
     this.provider = this.getProvider();
     this.userWallet = Wallet.createRandom().connect(this.provider);
     this.tokenContractInstance = new Contract(
@@ -19,7 +20,7 @@ class BlockchainService {
   }
 
   getProvider() {
-    return getDefaultProvider(process.env.REACT_APP_NETWORK);
+    return getDefaultProvider(process.env.NEXT_PUBLIC_NETWORK);
   }
 
   async address() {
@@ -36,7 +37,7 @@ class BlockchainService {
   }
 
   async networkName() {
-    const networkName = process.env.REACT_APP_NETWORK;
+    const networkName = process.env.NEXT_PUBLIC_NETWORK;
     return networkName;
   }
 
