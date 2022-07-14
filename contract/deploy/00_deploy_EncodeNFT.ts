@@ -1,7 +1,7 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 
-const deployNFTContract: DeployFunction = async function (
+const deployEncodeNFT: DeployFunction = async function (
   hre: HardhatRuntimeEnvironment
 ) {
   const { getNamedAccounts, deployments } = hre;
@@ -15,5 +15,5 @@ const deployNFTContract: DeployFunction = async function (
   });
   log("deployed NFT contract at " + receipt.address);
 };
-export default deployNFTContract;
-deployNFTContract.tags = ["all", "EncodeNFT"];
+export default deployEncodeNFT;
+deployEncodeNFT.tags = ["all", "EncodeNFT"];
