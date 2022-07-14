@@ -12,6 +12,9 @@
     "build": "yarn workspace next-app next build",
     "start": "yarn workspace next-app next start",
     "lint": "yarn workspace next-app next lint",
-    "hardhat": "yarn workspace smart-contracts hardhat"
+    "hardhat": "yarn workspace smart-contracts hardhat",
+    "nest:start": "yarn workspace backend nest start --watch",
+    "nest:build": "yarn workspace backend nest build",
+    "nest:test": "yarn workspace backend jest"
   }
 }
